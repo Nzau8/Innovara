@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Submit Your Testimonial</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_name">Your Name</label>
+                {{ form.name }}
+                {% if form.name.errors %}
+                    <div class="text-danger">
+                        {% for error in form.name.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="id_position">Your Position</label>
+                {{ form.position }}
+                {% if form.position.errors %}
+                    <div class="text-danger">
+                        {% for error in form.position.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="id_company">Company Name</label>
+                {{ form.company }}
+                {% if form.company.errors %}
+                    <div class="text-danger">
+                        {% for error in form.company.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="id_text">Your Testimonial</label>
+                {{ form.text }}
+                {% if form.text.errors %}
+                    <div class="text-danger">
+                        {% for error in form.text.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Testimonial</button>
+        </form>
+    </div>
+{% endblock %}

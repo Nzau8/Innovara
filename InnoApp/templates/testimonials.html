@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">What Our Clients Say</h1>
+        
+        <div class="row">
+            {% for testimonial in testimonials %}
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <h5>{{ testimonial.name }}</h5>
+                        <p>"{{ testimonial.text }}"</p>
+                        <p><small>{{ testimonial.created_at }}</small></p>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="text-center">No testimonials yet. Be the first to share your experience!</p>
+            {% endfor %}
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="{% url 'submit_testimonial' %}" class="btn btn-primary">Submit Your Testimonial</a>
+        </div>
+    </div>
+{% endblock %}

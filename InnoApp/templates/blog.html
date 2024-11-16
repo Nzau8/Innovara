@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<style>
+    /* Blog Page Styling */
+.container.mt-5 {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+h1.text-center {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.post-title {
+    font-size: 1.8rem;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.post-meta {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.post-excerpt {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 15px;
+}
+
+.btn.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 8px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Blog Post Card Styling */
+.blog-post {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Spacing between blog posts */
+.blog-post.mt-4 {
+    margin-top: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container.mt-5 {
+        padding: 20px;
+    }
+
+    h1.text-center {
+        font-size: 2rem;
+    }
+
+    .post-title {
+        font-size: 1.6rem;
+    }
+
+    .post-excerpt {
+        font-size: 1rem;
+    }
+}
+</style>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Our Blog</h1>
+
+        <!-- Blog Post 1 -->
+        <div class="blog-post">
+            <h3 class="post-title">The Future of Web Development</h3>
+            <p class="post-meta">Published on January 12, 2024 by <strong>Innovara</strong></p>
+            <p class="post-excerpt">
+                The future of web development is fast-paced and constantly evolving. With new technologies emerging daily, it's important to stay updated...
+            </p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-post mt-4">
+            <h3 class="post-title">5 Tips for Maintaining Your Website</h3>
+            <p class="post-meta">Published on February 5, 2024 by <strong>Innovara</strong></p>
+            <p class="post-excerpt">
+                Maintaining a website is crucial for its performance. In this article, we share some essential tips on how to keep your website fresh and secure...
+            </p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-post mt-4">
+            <h3 class="post-title">Why Branding Matters for Your Business</h3>
+            <p class="post-meta">Published on March 20, 2024 by <strong>Innovara</strong></p>
+            <p class="post-excerpt">
+                A strong brand identity helps your business stand out from the competition. In this article, we’ll discuss why branding is so important...
+            </p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+        
+        <!-- Add more blog posts as needed -->
+        
+    </div>
+{% endblock %}

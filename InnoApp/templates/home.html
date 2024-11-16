@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section for Home Page -->
+<section class="hero text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to Innovara</h1>
+        <p class="lead">Innovating solutions for a better tomorrow.</p>
+        <p class="mt-4">Where creativity meets technology to shape a brighter future. Together, we can make a difference in every step we take.</p>
+        <a href="{% url 'about' %}" class="btn btn-primary btn-lg">Learn More About Us</a>
+    </div>
+</section>
+{% endblock %}

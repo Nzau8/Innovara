@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Our Services</h2>
+    <div class="row">
+        <!-- Service 1: Custom Website and Web App Development -->
+        <div class="col-md-4">
+            <div class="service-box">
+                <h3>Custom Website and Web App Development</h3>
+                <p>We specialize in creating custom websites and web applications tailored to your needs. From business sites to e-commerce, we've got you covered.</p>
+                <a href="/custom_website/" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Service 2: Web Maintenance and Updates -->
+        <div class="col-md-4">
+            <div class="service-box">
+                <h3>Web Maintenance and Updates</h3>
+                <p>Ensure your website runs smoothly with regular maintenance and timely updates. Our team handles everything, so you don’t have to.</p>
+                <a href="/web_maintenance/" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Service 3: Branding and Identity -->
+        <div class="col-md-4">
+            <div class="service-box">
+                <h3>Branding and Identity</h3>
+                <p>We help businesses define their identity with professional branding. Get a memorable logo, brand guidelines, and more.</p>
+                <a href="/branding_identity/" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
