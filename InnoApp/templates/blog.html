@@ -81,40 +81,24 @@ h1.text-center {
     }
 }
 </style>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Our Blog</h1>
+    <!-- blog_list.html -->
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Our Blog</h1>
 
-        <!-- Blog Post 1 -->
-        <div class="blog-post">
-            <h3 class="post-title">The Future of Web Development</h3>
-            <p class="post-meta">Published on January 12, 2024 by <strong>Innovara</strong></p>
-            <p class="post-excerpt">
-                The future of web development is fast-paced and constantly evolving. With new technologies emerging daily, it's important to stay updated...
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-        </div>
-
-        <!-- Blog Post 2 -->
-        <div class="blog-post mt-4">
-            <h3 class="post-title">5 Tips for Maintaining Your Website</h3>
-            <p class="post-meta">Published on February 5, 2024 by <strong>Innovara</strong></p>
-            <p class="post-excerpt">
-                Maintaining a website is crucial for its performance. In this article, we share some essential tips on how to keep your website fresh and secure...
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-        </div>
-
-        <!-- Blog Post 3 -->
-        <div class="blog-post mt-4">
-            <h3 class="post-title">Why Branding Matters for Your Business</h3>
-            <p class="post-meta">Published on March 20, 2024 by <strong>Innovara</strong></p>
-            <p class="post-excerpt">
-                A strong brand identity helps your business stand out from the competition. In this article, we’ll discuss why branding is so important...
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-        </div>
-        
-        <!-- Add more blog posts as needed -->
-        
-    </div>
+    <!-- Check if there are any blog posts -->
+    {% if blogs %}
+        <!-- Display each blog post -->
+        {% for blog in blogs %}
+            <div class="blog-post">
+                <h3 class="post-title">{{ blog.title }}</h3>
+                <p class="post-meta">Published on {{ blog.published_date }} by <strong>{{ blog.author }}</strong></p>
+                <p class="post-excerpt">{{ blog.content|truncatewords:30 }}</p> <!-- Show the first 30 words -->
+                <a href="{% url 'blog_detail' blog.id %}" class="btn btn-primary">Read More</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <!-- Display message when there are no blog posts -->
+        <p class="alert alert-info">{{ message }}</p>
+    {% endif %}
+</div>
 {% endblock %}

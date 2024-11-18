@@ -1,61 +1,7 @@
-/* Navbar Styling */
-.navbar {
-    background-color: #0056b3; /* Dark blue */
-    padding: 10px 0;
+ a{
+  color: white;
+
 }
-
-.navbar-brand {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: white !important;
-    text-transform: uppercase;
-}
-
-.navbar-nav .nav-link {
-    color: #f1f1f1;
-    font-size: 1.1rem;
-    margin-right: 15px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ff5722; /* Highlight color */
-}
-
-.navbar-toggler {
-    border-color: #ff5722; /* Toggler color */
-}
-
-.navbar-toggler-icon {
-    background-color: #ff5722; /* Toggler icon color */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333; /* Dark grey */
-    color: white;
-    padding: 30px 0;
-    margin-top: 50px;
-}
-
-footer p {
-    font-size: 1.2rem;
-    margin-bottom: 0;
-}
-
-/* Responsive Design for Navbar */
-@media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .navbar-nav .nav-link {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    footer {
-        text-align: center;
-    }
+a:hover{
+    color: #0c969c;
 }
